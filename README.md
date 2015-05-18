@@ -15,7 +15,7 @@ b = a.b
 b.attrib['c'] == "asdf" # True
 ```
 
-`tree.a` will be a [`Element`-object](https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element) with the extra `__getattr__` method. This means that you can use the element as you would do normally, but names in your XML that crases with python's methods or attributes must be accessed through `tree.find(xpath)`.
+`tree.a` will be a [`Element`](https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element) with the extra `__getattr__` method. This means that you can use the element as you would do normally, but names in your XML that crases with python's methods or attributes must be accessed through `tree.find(xpath)`.
 
 This package uses the python implementation of etree, which makes it slower than the C-implementation found in CPython. An alternative would be to mmonkey-patch the built-in with [forbiddenfruit](https://github.com/clarete/forbiddenfruit), but I haven't looked into this.
 

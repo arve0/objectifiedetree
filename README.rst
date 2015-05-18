@@ -17,7 +17,7 @@ allows for:
     b.attrib['c'] == "asdf" # True
 
 ``tree.a`` will be a
-```Element``-object <https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element>`__
+```Element`` <https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element>`__
 with the extra ``__getattr__`` method. This means that you can use the
 element as you would do normally, but names in your XML that crases with
 python's methods or attributes must be accessed through
