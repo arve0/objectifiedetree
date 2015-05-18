@@ -1,3 +1,6 @@
+License for the etree submodule (which is copied from cpython) can be read
+in the beginning of the respective source file.
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Arve Seljebu
