@@ -6,7 +6,20 @@
 
 ## Overview
 
-Dot notation for ElementTrees
+Wouldn't it be nice to use dot notation for ElementTrees? This package allows for:
+
+```python
+tree = ET.fromstring('<root><a><b c="asdf" /></a></root>')
+a = tree.a
+b = a.b
+b.attrib['c'] == "asdf" # True
+```
+
+`tree.a` will be a [`Element`-object](https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element) with the extra `__getattr__` method. This means that you can use the element as you would do normally, but names in your XML that crases with python's methods or attributes must be accessed through `tree.find(xpath)`.
+
+This package uses the python implementation of etree, which makes it slower than the C-implementation found in CPython. An alternative would be to mmonkey-patch the built-in with [forbiddenfruit](https://github.com/clarete/forbiddenfruit), but I haven't looked into this.
+
+`objectifiedetree` has copied the etree python implementation from [CPython 3.4 Lib/xml/etree](https://github.com/python/cpython/tree/master/Lib/xml/etree) and will probably only work with Python 3.4.
 
 ## Installation
 
@@ -18,11 +31,19 @@ pip install objectifiedetree
 
 ## Example
 
-TODO: Write example.
+```python
+from objectifiedetree import *
 
-## API reference
+tree = ET.parse('/path/to/file.xml')
+# dot notation :-)
+el = tree.xpath.to.your.element
 
-API reference is at http://objectifiedetree.rtfd.org.
+# use normal etree attributes
+print(el.attrib)
+
+# access name crashes
+attrib_el = el.find('./attrib')
+```
 
 ## Development
 Install dependencies and link development version of objectifiedetree to pip:
