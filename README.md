@@ -17,7 +17,7 @@ b.attrib['c'] == "asdf" # True
 
 `tree.a` will be a [`Element`](https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element) with the extra [`__getattr__`](https://github.com/arve0/objectifiedetree/blob/master/objectifiedetree/__init__.py#L11-12) method. This means that you can use the element as you would do normally, but names in your XML that crases with python's methods or attributes must be accessed through `tree.find(xpath)`.
 
-This package uses the python implementation of etree, which makes it slower than the C-implementation found in CPython. An alternative would be to mmonkey-patch the built-in with [forbiddenfruit](https://github.com/clarete/forbiddenfruit), but I haven't looked into this.
+This package uses the python implementation of etree, which makes it slower than etree found in CPython. An alternative would be to monkey-patch the built-in with [forbiddenfruit](https://github.com/clarete/forbiddenfruit), but I haven't looked into this.
 
 `objectifiedetree` has copied the python implementation of etree from [CPython 3.4 Lib/xml/etree](https://github.com/python/cpython/tree/master/Lib/xml/etree) and will probably only work with Python 3.4.
 

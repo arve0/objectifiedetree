@@ -25,8 +25,8 @@ normally, but names in your XML that crases with python's methods or
 attributes must be accessed through ``tree.find(xpath)``.
 
 This package uses the python implementation of etree, which makes it
-slower than the C-implementation found in CPython. An alternative would
-be to mmonkey-patch the built-in with
+slower than etree found in CPython. An alternative would be to
+monkey-patch the built-in with
 `forbiddenfruit <https://github.com/clarete/forbiddenfruit>`__, but I
 haven't looked into this.
 
