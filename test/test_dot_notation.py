@@ -11,3 +11,6 @@ def test_dot_notation():
     assert tree.a is not None
     assert tree.a.b is not None
     assert tree.a.b.attrib['attr1'] == "asdf"
+
+    a = tree.a
+    assert a.b == tree.a.b
