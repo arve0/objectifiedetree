@@ -29,7 +29,7 @@ be to mmonkey-patch the built-in with
 `forbiddenfruit <https://github.com/clarete/forbiddenfruit>`__, but I
 haven't looked into this.
 
-``objectifiedetree`` has copied the etree python implementation from
+``objectifiedetree`` has copied the python implementation of etree from
 `CPython 3.4
 Lib/xml/etree <https://github.com/python/cpython/tree/master/Lib/xml/etree>`__
 and will probably only work with Python 3.4.

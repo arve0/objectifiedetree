@@ -19,7 +19,7 @@ b.attrib['c'] == "asdf" # True
 
 This package uses the python implementation of etree, which makes it slower than the C-implementation found in CPython. An alternative would be to mmonkey-patch the built-in with [forbiddenfruit](https://github.com/clarete/forbiddenfruit), but I haven't looked into this.
 
-`objectifiedetree` has copied the etree python implementation from [CPython 3.4 Lib/xml/etree](https://github.com/python/cpython/tree/master/Lib/xml/etree) and will probably only work with Python 3.4.
+`objectifiedetree` has copied the python implementation of etree from [CPython 3.4 Lib/xml/etree](https://github.com/python/cpython/tree/master/Lib/xml/etree) and will probably only work with Python 3.4.
 
 ## Installation
 
