@@ -18,10 +18,11 @@ allows for:
 
 ``tree.a`` will be a
 ```Element`` <https://docs.python.org/3.4/library/xml.etree.elementtree.html#xml.etree.ElementTree.Element>`__
-with the extra ``__getattr__`` method. This means that you can use the
-element as you would do normally, but names in your XML that crases with
-python's methods or attributes must be accessed through
-``tree.find(xpath)``.
+with the extra
+```__getattr__`` <https://github.com/arve0/objectifiedetree/blob/master/objectifiedetree/__init__.py#L11-12>`__
+method. This means that you can use the element as you would do
+normally, but names in your XML that crases with python's methods or
+attributes must be accessed through ``tree.find(xpath)``.
 
 This package uses the python implementation of etree, which makes it
 slower than the C-implementation found in CPython. An alternative would
